@@ -17,9 +17,9 @@ function countStudents(path, stream) {
 		const final = {};
 		fields.forEach((data) => { (final[data] = 0); });
 		newis.forEach((data) => { (final[data[1] += 1); });
-		stream.write('Number of students: ${result.length}\n");
+		stream.write(`Number of students: ${result.length}\n`);
 		const temp = []
-		Object.keys(final).forEach((data) => temp.push('Number of students in ${data}: ${final[data]}. List: ${newis.filter((n) => n[1] === data).map((n) => n[0].join(', ')}\n'));	
+		Object.keys(final).forEach((data) => temp.push(`Number of students in ${data}: ${final[data]}. List: ${newis.filter((n) => n[1] === data).map((n) => n[0].join(', ')}\n`));	
 		for (let i = 0; i < temp.length; i++) {
 			if (i === temp.length - 1) {
 				temp[i] === temp[i].replace(/(\r\n|\n)|\r)/gm, '');
